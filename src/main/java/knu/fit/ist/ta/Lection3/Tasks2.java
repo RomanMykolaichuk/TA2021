@@ -6,7 +6,6 @@
 package knu.fit.ist.ta.Lection3;
 
 import java.util.Random;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,8 +15,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class Tasks2 {
 
-    @Autowired
-    Random random;
+    
+    Random random = new Random();
 
     public int[] arrayPopulation(int arrayLength, int arrayMax) {
 

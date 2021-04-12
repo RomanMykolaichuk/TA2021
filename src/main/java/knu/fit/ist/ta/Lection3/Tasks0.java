@@ -16,7 +16,7 @@ public class Tasks0 {
         int c = b;
         c++;
         return b;
-    }    
+    }
 
     public int referenceProcessing(int a) {
         SomeInt b = new SomeInt(a);
@@ -25,25 +25,20 @@ public class Tasks0 {
 
         return b.intField;
     }
-    
-    class SomeInt {
-        public int intField;
-        
-        SomeInt(int intField){
-        this.intField=intField;
-        }
-    }
-    
-    
-    
-    
-    
-    
-    public String stringProcessing(int a){
-        String b = ""+a;
+
+    public String stringProcessing(int a) {
+        String b = "" + a;
         String c = b;
-        c = ""+ ++a;
-        return b;       
+        c = "" + ++a;
+        return b;
     }
 
+    class SomeInt {
+
+        public int intField;
+
+        SomeInt(int intField) {
+            this.intField = intField;
+        }
+    }
 }

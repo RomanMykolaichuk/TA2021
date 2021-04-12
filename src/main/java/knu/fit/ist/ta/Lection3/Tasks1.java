@@ -26,8 +26,8 @@ public class Tasks1 {
     }
 
     public int p113(int a, int n) {
-        k = 0;
-        b = 1;
+       k = 0;
+       b = 1;
         sout("a^b");
         sout(a, n);
         if (n < 0) {
@@ -37,7 +37,7 @@ public class Tasks1 {
             sout(b);
         } else {
             while (k++ != n) {
-                b *= a;
+                b*= a;
             }
             sout(b);
         }
@@ -102,6 +102,12 @@ public class Tasks1 {
         }
 
     }
+    
+    
+    
+    
+    
+    
 
     public int reverseInt(int startInt) {
         int reverseInt = 0;
