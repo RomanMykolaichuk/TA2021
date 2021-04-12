@@ -11,7 +11,14 @@ package knu.fit.ist.ta.Lection3;
  */
 public class Tasks3 {
 
+
+
+
 // a(3a-b)/(3b-a)
+ 
+    
+    
+    
     public double calculate(int a, int b) {
         double result = a * helper(a, b) / helper(b, a);
         //result = 1 / 5;

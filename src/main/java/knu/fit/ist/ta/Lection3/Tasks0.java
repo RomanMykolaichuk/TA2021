@@ -34,6 +34,11 @@ public class Tasks0 {
         }
     }
     
+    
+    
+    
+    
+    
     public String stringProcessing(int a){
         String b = ""+a;
         String c = b;
