@@ -9,7 +9,7 @@ package knu.fit.ist.ta.Lection3;
  *
  * @author 38068
  */
-public class TasksAdditional {
+public class Tasks0 {
 
     public int valueProcessing(int a) {
         int b = a;
@@ -28,9 +28,17 @@ public class TasksAdditional {
     
     class SomeInt {
         public int intField;
+        
         SomeInt(int intField){
         this.intField=intField;
         }
+    }
+    
+    public String stringProcessing(int a){
+        String b = ""+a;
+        String c = b;
+        c = ""+ ++a;
+        return b;       
     }
 
 }

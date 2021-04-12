@@ -103,6 +103,16 @@ public class Tasks1 {
 
     }
 
+    public int reverseInt(int startInt) {
+        int reverseInt = 0;
+        k = startInt;
+        while (k != 0) {
+            reverseInt = reverseInt * 10 + k % 10;
+            k /= 10;
+        }
+        return reverseInt;
+    }
+
     public void sout(String message) {
         System.out.println("===== " + message + " =====");
     }
