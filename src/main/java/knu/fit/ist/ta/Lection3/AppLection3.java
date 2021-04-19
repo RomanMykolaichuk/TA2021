@@ -5,6 +5,8 @@
  */
 package knu.fit.ist.ta.Lection3;
 
+import knu.fit.ist.ta.lection4.Lab4Task;
+
 /**
  *
  * @author 38068
@@ -38,11 +40,10 @@ public class AppLection3 {
         System.out.println(t2.arrayPrint(t2.arrayShuffle(t2.arrayRange(10))));
         System.out.println(t2.arrayPrint(t2.arrayShuffle(t2.arrayRange(10))));
         System.out.println(t2.arrayPrint(t2.arrayShuffle(t2.arrayRange(10), 345)));*/
-        System.out.println("IP-11");
-        System.out.println(t2.arrayPrint(t2.arrayShuffle(t2.arrayRange(25), 294)));
-        System.out.println("IP-12");
-        System.out.println(t2.arrayPrint(t2.arrayShuffle(t2.arrayRange(25), 156)));
-
+ /* System.out.println("IP-11");
+ System.out.println(t2.arrayPrint(t2.arrayShuffle(t2.arrayRange(25), 294)));
+ System.out.println("IP-12");
+ System.out.println(t2.arrayPrint(t2.arrayShuffle(t2.arrayRange(25), 156)));*/
         //System.out.println(t2.arrayString(10));
 
         /*
@@ -51,5 +52,10 @@ public class AppLection3 {
  System.out.println(t3.calculate(1, 2));
  System.out.println(t3.calculate(2, 1));
          */
+        
+        
+       Lab4Task l4t = new Lab4Task();
+       
+        System.out.println(l4t.getTaskLab4().toString());
     }
 }

@@ -28,6 +28,17 @@ public class Tasks2 {
 
         return result;
     }
+    
+     public int[] arrayPopulation2(int arrayLength,int arrayMin, int arrayMax) {
+
+        int[] result = new int[arrayLength];
+
+        for (int j = 0; j < arrayLength; j++) {
+            result[j] = random.nextInt(arrayMax-arrayMin + 1)+arrayMin;
+        }
+
+        return result;
+    }
 
     public String arrayPrint(int[] intArray) {
         String result = "{";
