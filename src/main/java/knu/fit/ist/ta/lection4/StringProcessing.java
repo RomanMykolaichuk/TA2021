@@ -18,6 +18,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class StringProcessing {
 
+    public String getText() {
+        return text;
+    }
+
     String text;
 
     public StringProcessing() {

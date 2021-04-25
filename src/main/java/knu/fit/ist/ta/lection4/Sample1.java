@@ -5,8 +5,6 @@
  */
 package knu.fit.ist.ta.lection4;
 
-import knu.fit.ist.ta.lection4.lab4demo.Demo;
-
 /**
  *
  * @author 38068
@@ -33,21 +31,14 @@ public class Sample1 {
        
        sm.showResult("^\\d{1,4}$", "2345");*/
         StringProcessing sp = new StringProcessing();
+        
 
         /*  System.out.println(sp.getList(sp.text));
         System.out.println(sp.getList(sp.text).size());
         System.out.println("=====================");
         System.out.println(sp.getSet(sp.text));
         System.out.println(sp.getSet(sp.text).size());*/
-        Demo demo = new Demo();
-
-        System.out.println("======= Words count =======");
-        demo.calculateResult(sp.getList(sp.text));
-        System.out.println(demo.getResultList());
-
-       System.out.println("======= CharSequences count =======");
-        demo.calculateResult(sp.getList(sp.text), 5);
-        System.out.println(demo.getResultList());
+       
 
         /*System.out.println("==========IP-11===========");
         
