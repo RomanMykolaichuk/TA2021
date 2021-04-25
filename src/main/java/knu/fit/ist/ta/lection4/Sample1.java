@@ -5,6 +5,8 @@
  */
 package knu.fit.ist.ta.lection4;
 
+import knu.fit.ist.ta.lection4.lab4demo.Demo;
+
 /**
  *
  * @author 38068
@@ -30,17 +32,24 @@ public class Sample1 {
        sm.showResult("^\\d{1,3}$", "2345");
        
        sm.showResult("^\\d{1,4}$", "2345");*/
- /*
-       StringProcessing sp = new StringProcessing();
-       
-       System.out.println(sp.getList(sp.text));
-       System.out.println(sp.getList(sp.text).size());
-       System.out.println("=====================");
-       System.out.println(sp.getSet(sp.text));
-       System.out.println(sp.getSet(sp.text).size());
-       
-         */
-        System.out.println("==========IP-11===========");
+        StringProcessing sp = new StringProcessing();
+
+        /*  System.out.println(sp.getList(sp.text));
+        System.out.println(sp.getList(sp.text).size());
+        System.out.println("=====================");
+        System.out.println(sp.getSet(sp.text));
+        System.out.println(sp.getSet(sp.text).size());*/
+        Demo demo = new Demo();
+
+        System.out.println("======= Words count =======");
+        demo.calculateResult(sp.getList(sp.text));
+        System.out.println(demo.getResultList());
+
+       System.out.println("======= CharSequences count =======");
+        demo.calculateResult(sp.getList(sp.text), 5);
+        System.out.println(demo.getResultList());
+
+        /*System.out.println("==========IP-11===========");
         
         Lab4Task l4t = new Lab4Task(452);
 
@@ -50,8 +59,7 @@ public class Sample1 {
 
         l4t.setRandSeed(129);
 
-        System.out.println(l4t.getTaskLab4());
-
+        System.out.println(l4t.getTaskLab4());*/
     }
 
 }
