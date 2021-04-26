@@ -41,24 +41,24 @@ public class App {
         
         System.out.println(sorting.mergeLists(
         sorting.getUnsortedList().subList(0, 5),
-        sorting.getUnsortedList().subList(5, 10)));*/
- /*System.out.println("======= Sorting Approach3 =======");
+        sorting.getUnsortedList().subList(5, 10)));
+        
+        
+        
+        System.out.println("======= Sorting Approach3 =======");
         time = System.currentTimeMillis();
         System.out.println(sorting.sortApproach3());
         time = System.currentTimeMillis() - time;
-        System.out.println("time (ms):" + time);*/
+        System.out.println("time (ms):" + time);
+         */
         Searching searching = new Searching();
 
-        //System.out.println("======= Sorted =======");
+        System.out.println("======= Sorted =======");
         List<Integer> list = sorting.sortApproach3();
-        int find = list.get(list.size() - 1);
-        //System.out.println(list);
 
-        //find = 98;
-        /*  for (int i = 0; i < maxItems; i++) {
-        
-        find = i;*/
- /*System.out.println("======= Linear search =======");
+        int find = list.get(list.size() - 1);
+
+        /*System.out.println("======= Linear search =======");
         time = System.currentTimeMillis();
         System.out.println(searching.linearSearch(find, list));
         time = System.currentTimeMillis() - time;
@@ -66,30 +66,34 @@ public class App {
         
         System.out.println("======= Binary search =======");
         
-        //System.out.println(sorting.getUnsortedList());
+        
         time = System.currentTimeMillis();
         System.out.println(searching.binarySearch(find, list));
         time = System.currentTimeMillis() - time;
         System.out.println("time (ms):" + time);
         
+        
+        
         System.out.println("======= Jump search =======");
         
-        //System.out.println(sorting.getUnsortedList());
+        
         time = System.currentTimeMillis();
         System.out.println(searching.jumpSearch(find, list, maxItems / 100));
         time = System.currentTimeMillis() - time;
         System.out.println("time (ms):" + time);*/
  /*  }*/
         MultiThreadSearch mts = new MultiThreadSearch(find, list.subList(0, maxItems / 2));
-        Thread thread = new Thread(mts);
         MultiThreadSearch mts1 = new MultiThreadSearch(find, list.subList(maxItems / 2, list.size()));
-        Thread thread1 = new Thread(mts1);
-        thread.start();
-        thread1.start();
+
         time = System.currentTimeMillis();
+
+        new Thread(mts).start();
+        new Thread(mts1).start();
+        
+       
         System.out.println("======= Linear search =======");
 
-        System.out.println(searching.linearSearch(find, list.subList(maxItems / 2, list.size())));
+        System.out.println(searching.linearSearch(find, list.subList(maxItems / 3, list.size())));
 
         System.out.println("time (ms):" + (System.currentTimeMillis() - time));
 

@@ -12,13 +12,23 @@ import java.util.List;
  *
  * @author 38068
  */
-public class MultiThreadSearch implements Runnable{
-    
+public class MultiThreadSearch implements Runnable {
+
     private List<Integer> searchResults = new ArrayList<>();
-    
+
+    private List<Integer> inputList;
+
     int find;
-    
+
+    private final Searching searching = new Searching();
+
     private boolean finished = false;
+    
+    @Override
+    public void run() {
+        searchResults.add(searching.linearSearch(find, inputList));
+        finished = true;
+    }
 
     public int getFind() {
         return find;
@@ -27,10 +37,6 @@ public class MultiThreadSearch implements Runnable{
     public void setFind(int find) {
         this.find = find;
     }
-    
-    private List<Integer> inputList;
-    
-    private final Searching searching = new Searching();
 
     public MultiThreadSearch() {
     }
@@ -40,20 +46,11 @@ public class MultiThreadSearch implements Runnable{
         this.inputList = inputList;
     }
 
-    
-    
-    
-    @Override
-    public void run() {                
-        searchResults.add(searching.linearSearch(find,inputList));
-        finished = true;        
-    }
+  
 
     public List<Integer> getSearchResults() {
         return searchResults;
     }
-
-    
 
     public List<Integer> getInputList() {
         return inputList;
@@ -71,8 +68,4 @@ public class MultiThreadSearch implements Runnable{
         return finished;
     }
 
-    
-
-    
-    
 }

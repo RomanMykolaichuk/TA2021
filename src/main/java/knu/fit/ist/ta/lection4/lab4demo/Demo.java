@@ -20,6 +20,7 @@ public class Demo {
 
     public void calculateResult(Collection<String> listIn) {
         resultList = new ArrayList<>();
+        
         Iterator<String> iterator = listIn.iterator();
 
         while (iterator.hasNext()) {
