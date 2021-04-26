@@ -80,24 +80,25 @@ public class App {
         time = System.currentTimeMillis() - time;
         System.out.println("time (ms):" + time);*/
  /*  }*/
- /* MultiThreadSearch mts = new MultiThreadSearch(find, list.subList(0, maxItems / 2));
- Thread thread = new Thread(mts);
- MultiThreadSearch mts1 = new MultiThreadSearch(find, list.subList(maxItems / 2, list.size()));
- Thread thread1 = new Thread(mts1);
- thread.start();
- thread1.start();
- time = System.currentTimeMillis();
- System.out.println("======= Linear search =======");
- 
- System.out.println(searching.linearSearch(find, list));
- 
- System.out.println("time (ms):" + (System.currentTimeMillis() - time));
- 
- System.out.println(mts.getSearchResults());
- System.out.println(mts1.getSearchResults());
- 
- time = System.currentTimeMillis() - time;
- System.out.println("time (ms):" + time);*/
+        MultiThreadSearch mts = new MultiThreadSearch(find, list.subList(0, maxItems / 2));
+        Thread thread = new Thread(mts);
+        MultiThreadSearch mts1 = new MultiThreadSearch(find, list.subList(maxItems / 2, list.size()));
+        Thread thread1 = new Thread(mts1);
+        thread.start();
+        thread1.start();
+        time = System.currentTimeMillis();
+        System.out.println("======= Linear search =======");
+
+        System.out.println(searching.linearSearch(find, list.subList(maxItems / 2, list.size())));
+
+        System.out.println("time (ms):" + (System.currentTimeMillis() - time));
+
+        System.out.println("======= MultiThread Linear search =======");
+        System.out.println(mts.getSearchResults());
+        System.out.println(mts1.getSearchResults());
+
+        time = System.currentTimeMillis() - time;
+        System.out.println("time (ms):" + time);
     }
 
 }
