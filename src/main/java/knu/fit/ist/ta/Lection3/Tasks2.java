@@ -86,6 +86,19 @@ public class Tasks2 {
         return array;
     }
     
+     public String[] arrayShuffle(String[] array, int seed) {
+        Random rand = new Random(seed);        
+        String temp;
+        int arl = array.length;
+        for (int j = 0; j < arl; j++) {
+            int indexToSwap = rand.nextInt(arl);
+            temp = array[indexToSwap];
+            array[indexToSwap] = array[j];
+            array[j] = temp;
+        }        
+        return array;
+    }
+    
     public String arrayString(int n){
     String result="";
         for (int j = 1; j <= n; j++) {
