@@ -34,6 +34,18 @@ public class Searching {
         }
         return result;
     }
+     
+     public int linearSearch(int find, int start, int finish, List<Integer> list) {
+        int result = -1;
+
+        for (int i = start; i < finish; i++) {
+            if (list.get(i) == find) {
+                return i;
+            }
+        }
+        return result;
+    }
+     
 
     public int binarySearch(int find, List<Integer> sortedList) {
         int result = -1;
