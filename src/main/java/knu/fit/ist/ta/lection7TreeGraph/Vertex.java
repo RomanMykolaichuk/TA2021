@@ -12,6 +12,7 @@ import java.util.Objects;
  * @author 38068
  */
 public class Vertex {
+    
     String label;
     
     Vertex(String label) {

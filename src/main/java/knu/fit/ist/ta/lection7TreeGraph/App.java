@@ -48,8 +48,11 @@ public class App {
         System.out.println("");
         tree.traverseLevelOrder(tree.root);
         System.out.println("");*/
-        Graph graph = new Graph();
-
+       
+        
+        
+        /*Graph graph = new Graph();
+        
         graph.addVertex("Bob");
         graph.addVertex("Alice");
         graph.addVertex("Mark");
@@ -61,9 +64,12 @@ public class App {
         graph.addEdge("Rob", "Mark");
         graph.addEdge("Alice", "Maria");
         graph.addEdge("Rob", "Maria");
-
+        
         System.out.println(graph.depthFirstTraversal(graph, "Bob"));
-        System.out.println(graph.breadthFirstTraversal(graph, "Bob"));
+        System.out.println(graph.breadthFirstTraversal(graph, "Bob"));*/
+        
+        
+        
     }
 
 }
