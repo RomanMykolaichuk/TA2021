@@ -19,10 +19,9 @@ public class Demo {
     private List<Entity> resultList;
 
     public void calculateResult(Collection<String> listIn) {
-        resultList = new ArrayList<>();
-        
-        Iterator<String> iterator = listIn.iterator();
 
+        Iterator<String> iterator = listIn.iterator();
+        resultList = new ArrayList<>();
         while (iterator.hasNext()) {
             Entity tempEntity = new Entity(iterator.next(), 1);
 

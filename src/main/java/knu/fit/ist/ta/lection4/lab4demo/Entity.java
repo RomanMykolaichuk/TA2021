@@ -46,8 +46,8 @@ public class Entity  {
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 79 * hash + Objects.hashCode(this.text);
+        int hash = 3;
+        hash = 37 * hash + Objects.hashCode(this.text);
         return hash;
     }
 
@@ -68,19 +68,11 @@ public class Entity  {
         }
         return true;
     }
-    
-    
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Entity{text=").append(text);
-        sb.append(", count=").append(count);
-        sb.append('}');
-        return sb.toString();
+        return "Entity{" + "text=" + text + ", count=" + count + '}';
     }
 
-       
-    
-    
+   
 }

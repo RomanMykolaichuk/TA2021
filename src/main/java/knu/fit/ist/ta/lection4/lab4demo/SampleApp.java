@@ -23,7 +23,7 @@ public class SampleApp {
         System.out.println(demo.getResultList());
 
         System.out.println("======= CharSequences count =======");
-        demo.calculateResult(sp.getSet(sp.getText()), 5);
+        demo.calculateResult(sp.getSet(sp.getText()), 2);
         System.out.println(demo.getResultList());
     }
 

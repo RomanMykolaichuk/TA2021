@@ -16,6 +16,6 @@ public class EntityComparatorText implements Comparator<Entity>{
     @Override
     public int compare(Entity firstEntity, Entity secondEntity) {
        return firstEntity.getText().compareTo(secondEntity.getText());
-    }
+        }
     
 }

@@ -15,8 +15,8 @@ public class EntityComparatorCount implements Comparator<Entity>{
 
     @Override
     public int compare(Entity firstEntity, Entity secondEntity) {
-                
         return Integer.compare(firstEntity.getCount(), secondEntity.getCount());
     }
-    
+
+   
 }
