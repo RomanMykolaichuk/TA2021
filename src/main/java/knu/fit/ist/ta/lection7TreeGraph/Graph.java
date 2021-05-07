@@ -41,7 +41,7 @@ public class Graph {
     void removeVertex(String label) {
         Vertex v = new Vertex(label);
         adjVertices.values().stream().forEach(e -> e.remove(v));
-        adjVertices.remove(new Vertex(label));
+        adjVertices.remove(v);
     }
 
     void addEdge(String label1, String label2) {
@@ -75,7 +75,8 @@ public class Graph {
         while (!stack.isEmpty()) {
             String vertex = stack.pop();
             if (!visited.contains(vertex)) {
-                visited.add(vertex);
+                visited.add(vertex);               
+                
                 for (Vertex v : graph.getAdjVertices(vertex)) {
                     stack.push(v.label);
                 }
@@ -90,7 +91,8 @@ public class Graph {
         queue.add(root);
         visited.add(root);
         while (!queue.isEmpty()) {
-            String vertex = queue.poll();
+            String vertex = queue.poll();           
+           
             for (Vertex v : graph.getAdjVertices(vertex)) {
                 if (!visited.contains(v.label)) {
                     visited.add(v.label);

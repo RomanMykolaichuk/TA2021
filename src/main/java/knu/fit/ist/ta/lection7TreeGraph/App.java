@@ -13,15 +13,15 @@ public class App {
 
     public static void main(String[] args) {
 
-        /*  Tree tree = new Tree();
+        /* Tree tree = new Tree();
         
-        tree.add(6);
+        tree.add(7);
         tree.add(4);
         tree.add(8);
         tree.add(3);
         tree.add(9);
         tree.add(5);
-        tree.add(7);
+        tree.add(6);
         tree.add(10);
         
         System.out.println(tree.containsNode(6));
@@ -47,11 +47,11 @@ public class App {
         tree.traversePostOrder(tree.root);
         System.out.println("");
         tree.traverseLevelOrder(tree.root);
-        System.out.println("");*/
-       
+        System.out.println("");
         
+        */
         
-        /*Graph graph = new Graph();
+        Graph graph = new Graph();
         
         graph.addVertex("Bob");
         graph.addVertex("Alice");
@@ -66,7 +66,7 @@ public class App {
         graph.addEdge("Rob", "Maria");
         
         System.out.println(graph.depthFirstTraversal(graph, "Bob"));
-        System.out.println(graph.breadthFirstTraversal(graph, "Bob"));*/
+        System.out.println(graph.breadthFirstTraversal(graph, "Bob"));
         
         
         
