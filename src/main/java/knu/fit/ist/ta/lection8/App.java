@@ -6,6 +6,9 @@
 package knu.fit.ist.ta.lection8;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  *
@@ -13,23 +16,28 @@ import java.lang.reflect.Method;
  */
 public class App {
 
+    static int algRepeat;
+    static List<String> methodList;
+
+    static {
+        String[] temp = {"constTime", "logarythmic", "linear", "nLogN",
+            "polynom", "exponential", "factorial"};
+
+        methodList = Arrays.asList(temp);
+
+    }
+
     public static void main(String[] args) throws Exception {
-
-        System.out.println("===== 1 time =====");
-        System.out.println("===== Const =====");
-        runAlgorythm("constTime", 1);
-        System.out.println("===== Linear =====");
-        runAlgorythm("linear", 1);
-        System.out.println("===== Logarythmic =====");
-        runAlgorythm("logarythmic", 1);
-        System.out.println("===== NlogN =====");
-        runAlgorythm("nLogN", 1);
-        System.out.println("===== Polynom =====");
-        runAlgorythm("polinom", 1);
-
-        System.out.println("===== 10 times =====");
-        System.out.println("===== Sum =====");
-        runAlgorythm("sum", 10);
+        algRepeat = 1;
+        repeatAlgorytms(methodList, algRepeat);
+        algRepeat = 2;
+        repeatAlgorytms(methodList, algRepeat);
+        algRepeat = 5;
+        repeatAlgorytms(methodList, algRepeat);
+        algRepeat = 7;
+        repeatAlgorytms(methodList, algRepeat);
+        algRepeat = 10;
+        repeatAlgorytms(methodList, algRepeat);
 
     }
 
@@ -37,14 +45,21 @@ public class App {
 
         Method method = OComplexity.class.getMethod(methodName, int.class);
         OComplexity oc = new OComplexity();
-
+        System.out.println("===== " + methodName + " " + n + " time(s) =====");
         long time = System.currentTimeMillis();
-
         method.invoke(oc, n);
-
         time = System.currentTimeMillis() - time;
-        System.out.println("time (s*10):" + time / 100);
 
+        System.out.println("time (s):" + time / 10);
+
+    }
+
+    public static void repeatAlgorytms(List<String> list, int times) throws Exception {
+        for (String item : list) {
+            runAlgorythm(item, times);
+        }
+
+        System.out.println("===============================================");
     }
 
 }
