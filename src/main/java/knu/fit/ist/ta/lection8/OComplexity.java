@@ -65,7 +65,7 @@ public class OComplexity {
     public void factorial(int n) throws InterruptedException {
 
         if(n>7){
-            System.out.println("No solution in adequate time");
+            System.out.println("NO SOLUTIONS in adequate time");
         return;
         }
         for (int i = 1; i <= fact(n); i++) {
