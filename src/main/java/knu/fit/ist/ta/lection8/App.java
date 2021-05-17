@@ -49,8 +49,8 @@ public class App {
         method.invoke(oc, elements);
         time = System.currentTimeMillis() - time;
 
-        System.out.println("element(s):" + time / 10);
-
+        System.out.println("element(s):" + time / 10);        
+        
     }
 
     public static void repeatAlgorytms(List<String> list, int elements) throws Exception {
