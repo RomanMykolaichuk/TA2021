@@ -6,7 +6,6 @@
 package knu.fit.ist.ta.lection8;
 
 import java.lang.reflect.Method;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,7 +15,7 @@ import java.util.List;
  */
 public class App {
 
-    static int algRepeat;
+    static int algSize;
     static List<String> methodList;
 
     static {
@@ -28,35 +27,35 @@ public class App {
     }
 
     public static void main(String[] args) throws Exception {
-        algRepeat = 1;
-        repeatAlgorytms(methodList, algRepeat);
-        algRepeat = 2;
-        repeatAlgorytms(methodList, algRepeat);
-        algRepeat = 5;
-        repeatAlgorytms(methodList, algRepeat);
-        algRepeat = 7;
-        repeatAlgorytms(methodList, algRepeat);
-        algRepeat = 10;
-        repeatAlgorytms(methodList, algRepeat);
+        algSize = 1;
+        repeatAlgorytms(methodList, algSize);
+        algSize = 2;
+        repeatAlgorytms(methodList, algSize);
+        algSize = 5;
+        repeatAlgorytms(methodList, algSize);
+        algSize = 7;
+        repeatAlgorytms(methodList, algSize);
+        algSize = 10;
+        repeatAlgorytms(methodList, algSize);
 
     }
 
-    public static void runAlgorythm(String methodName, int n) throws Exception {
+    public static void runAlgorythm(String methodName, int elements) throws Exception {
 
         Method method = OComplexity.class.getMethod(methodName, int.class);
         OComplexity oc = new OComplexity();
-        System.out.println("===== " + methodName + " " + n + " time(s) =====");
+        System.out.println("===== " + methodName + " " + elements + " element(s) =====");
         long time = System.currentTimeMillis();
-        method.invoke(oc, n);
+        method.invoke(oc, elements);
         time = System.currentTimeMillis() - time;
 
-        System.out.println("time (s):" + time / 10);
+        System.out.println("element(s):" + time / 10);
 
     }
 
-    public static void repeatAlgorytms(List<String> list, int times) throws Exception {
+    public static void repeatAlgorytms(List<String> list, int elements) throws Exception {
         for (String item : list) {
-            runAlgorythm(item, times);
+            runAlgorythm(item, elements);
         }
 
         System.out.println("===============================================");
